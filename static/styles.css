@@ -1,0 +1,52 @@
+body {
+	--dark-bg: hsl(220, 5%, 10%);
+	--dark-color: white;
+	
+	--light-bg: hsl(220, 1%, 99%);
+	--light-color: black;
+
+	--icon-width: 100px;
+
+	background-color: var(--dark-bg);
+	color: var(--dark-color);
+}
+
+.files {
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(auto-fill, var(--icon-width));
+	grid-gap: 2px;
+	justify-content: space-evenly;
+}
+
+.file {
+	border: solid 1px transparent;
+	padding: 4px;
+	overflow-wrap: break-word;
+
+	text-align: center;	
+	font-family: 'Tahoma';
+	font-size: 12pt;
+	
+}
+
+@supports (-webkit-line-clamp: 3) {
+	.file {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;  
+		overflow: hidden;	
+	}
+}
+
+.file:hover {
+	border-color: hsl(220, 80%, 60%);
+	background-color: hsla(220, 80%, 60%, 0.2);
+}
+
+.file img {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Folder</title>
+	<link rel="stylesheet" type="text/css" href="/static/styles.css">
+	<script type="text/javascript" src="/static/folder_scripts.js"></script>
+</head>
+<body>
+	<section class="files">
+	{% for file in files %}
+		<div class="file" data-location="{{ file.virtualPathUrl }}">
+			<img src="{{ file.icon }}">
+			<span>{{ file.name }}</span>
+		</div>
+	{% endfor %}
+	</section>
+</body>
+</html>
